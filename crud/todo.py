@@ -130,7 +130,13 @@ class Todo(CreateMixin,ListingMixin,RetrieveMixin,UpdateMixin,DeleteMixin):
 todo = Todo()
 
 while True:
-    o = int(input('Please choose what you want to do, list above. Write only number: '))
+    o = int(input('''
+    1)create;
+    2)read;
+    3)update;
+    4)delete;
+    
+    Please choose what you want to do, list above. Write only number: '''))
     if o ==1:
         todo.create()
     elif o ==2:
